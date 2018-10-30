@@ -20,3 +20,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
+
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 2px #ddd solid; }
+
+@media (max-width: 768px) {
+  #showcase {
+    min-height: 500px; }
+    #showcase h1 {
+      font-size: 2.5rem; }
+
+  .mb-resp {
+    margin-bottom: 1rem; } }
