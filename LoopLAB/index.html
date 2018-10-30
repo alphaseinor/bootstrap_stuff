@@ -308,6 +308,23 @@
     $('#year').text(new Date().getFullYear());
     //initialize scrollspy
     $('body').scrollspy({ target: "#main-nav" })
+    //initialize smooth scrolling
+    $('#main-nav a').on('click', function (e) {
+      if (this.hash !== '') {
+        //prevent the default behavior
+        e.preventDefault();
+        //store hash
+        const hash = this.hash;
+        //animate smooth scroll.
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, function () {
+          //add has to url after scroll
+          window.location.hash = hash;
+        });
+      }
+
+    });
   </script>
 </body>
 
