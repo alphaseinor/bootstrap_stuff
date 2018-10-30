@@ -14,9 +14,9 @@
   <title>Bootstrap Boilerplate</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-nav" id="home">
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
     <div class="container">
       <a href="index.html" class="navbar-brand">LoopLAB</a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="navbar-collapse">
@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#home-section" class="nav-link">Home</a>
+            <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
             <a href="#explore-head-section" class="nav-link">Explore</a>
@@ -247,6 +247,54 @@
       </div>
     </div>
   </section>
+
+  <!--Footer-->
+  <footer id="main-footer" class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-4">
+          <h3>LoopLAB</h3>
+          <p>Copywright &copy; <span id="year"></span> </p>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal"></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--Contact Modal-->
+
+  <div class="modal fade text-dark" id="contactModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Us</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-block">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
